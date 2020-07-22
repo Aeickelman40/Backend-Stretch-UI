@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import ShoeBox from '../ShoeBox/ShoeBox'
+import Shoes from '../Shoes/Shoes'
 
 class App extends Component {
   constructor () {
@@ -14,9 +16,12 @@ class App extends Component {
 
   render() {
     return (
+      <section>
       <h1>Setup</h1>
+      <ShoeBox />
+      </section>
     );
-}
+  }
 }
 
 export default App;
