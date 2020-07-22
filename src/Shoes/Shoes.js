@@ -2,7 +2,13 @@ import React from 'react'
 
 const Shoes = () => {
     return (
-        <h1>Shoes</h1>
+        <section>
+            <h1>Individual shoe</h1>
+            <p>Model: </p>
+            <p>Brand: </p>
+            <p>Cost: </p>
+            <p></p>
+        </section>
     )
 }
 

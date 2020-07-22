@@ -3,7 +3,10 @@ import Shoes from '../Shoes/Shoes'
 
 const ShoeBox = () => {
     return (
-        <Shoes />
+        <section className="shoe-box">
+            <p>Shoe Box</p>
+            <Shoes />
+        </section>
     )
 }
 
