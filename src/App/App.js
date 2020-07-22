@@ -17,8 +17,13 @@ class App extends Component {
   render() {
     return (
       <section>
-      <h1>Setup</h1>
-      <ShoeBox />
+        <section className="header">
+          <h1>Sole Searchin'</h1>
+          <p>Find your sole mate</p>
+        </section>
+        <section className="main-body">
+          <ShoeBox />
+        </section>
       </section>
     );
   }
