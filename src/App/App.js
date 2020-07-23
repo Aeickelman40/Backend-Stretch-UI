@@ -2,19 +2,28 @@ import React, { Component } from 'react';
 import './App.css';
 import ShoeBox from '../ShoeBox/ShoeBox'
 import Shoes from '../Shoes/Shoes'
+import {getAllShoes} from '../ApiCalls'
 
 class App extends Component {
   constructor () {
     super();
-    this.state = {}
+    this.state = {
+      shoes: []
+    }
   }
 
-  componentDidMount = () => {
-
+  componentDidMount = async () => {
+    try {
+      const allShoes = await getAllShoes();
+      this.setState({shoes: allShoes})
+    } catch (error) {
+      await this.setState({error: error})
+    }
   }
-
-
+  
+  
   render() {
+    console.log(this.state.shoes)
     return (
       <section>
         <section className="header">
