@@ -1,6 +1,5 @@
-import { getHeapCodeStatistics } from "v8";
 
-const url = "http//localhost:3002/api/v1/shoes";
+const url = "http://localhost:3002/api/v1/shoes";
 
 export const getAllShoes = async () => {
   const response = await fetch(url);
