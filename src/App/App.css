@@ -1,20 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
 
+/*
+#cb997e
+#eddcd2
+#fff1e6
+#f0efeb
+#ddbea9
+#a5a58d
+#b7b7a4
+*/
 .App {
-  text-align: center;  
+  text-align: center;
   width: 100%;
   height: 100vh;
 }
 
+/* * {
+background-color: #a5a58d;
+} */
 .header {
   font-family: 'Covered By Your Grace', cursive;
   display: flex;
   background-color: #a5a58d;
+  height: 18%;
+  position: absolute;
+  padding: 1em;
+  width: 100%;
+  top: 0;
+}
+
+.header h1 {
+  width: 15%;
+  font-size: 3em;
+  margin: 0;
 }
 
 .main-body {
   font-family: 'Covered By Your Grace', cursive;
-  background-color: #f0efeb
+  background-color: #f0efeb;
+  height: 82%;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 0 1em;
 }
 
 

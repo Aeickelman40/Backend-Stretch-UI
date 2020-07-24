@@ -23,7 +23,7 @@ class App extends Component {
   
   
   render() {
-    console.log(this.state.shoes)
+    console.log(this.state)
     return (
       <section>
         <section className="header">
@@ -31,7 +31,7 @@ class App extends Component {
           <p>Find your sole mate</p>
         </section>
         <section className="main-body">
-          <ShoeBox />
+          <ShoeBox shoes={this.state.shoes}/>
         </section>
       </section>
     );
