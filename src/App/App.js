@@ -3,6 +3,7 @@ import './App.css';
 import ShoeBox from '../ShoeBox/ShoeBox'
 import Shoes from '../Shoes/Shoes'
 import {getAllShoes} from '../ApiCalls'
+import { Route } from 'react-router-dom';
 
 class App extends Component {
   constructor () {
@@ -32,6 +33,7 @@ class App extends Component {
         </section>
         <section className="main-body">
           <ShoeBox shoes={this.state.shoes}/>
+          <Route exact path="/shoes/:id" />
         </section>
       </section>
     );
