@@ -1,0 +1,13 @@
+.shoe-box {
+  box-shadow: inset 1px 1px 13px black;
+  border-radius: 10px;
+  width: 40%;
+  max-height: 10%;
+  margin: 1%;
+  padding: 25px;
+}
+.sneaker-image {
+  box-shadow: -1px 0px 13px 0px black;
+  border-radius: 10px;
+}
+

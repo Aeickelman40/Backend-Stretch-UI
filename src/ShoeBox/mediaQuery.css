@@ -1,0 +1,6 @@
+  /* media queries */
+  @media (max-width: 767px) {
+    .shoe-box {
+      width: 80%;
+    }
+  }
