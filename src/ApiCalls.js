@@ -1,5 +1,5 @@
 
-const url = "http://localhost:3002/api/v1/shoes";
+const url = "https://sole-searchin.herokuapp.com/api/v1/shoes";
 
 export const getAllShoes = async () => {
   const response = await fetch(url);
