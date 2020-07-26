@@ -22,45 +22,30 @@ class App extends Component {
       await this.setState({error: error})
     }
   }
-
-  // renderExpandedShoe = () => {
-  //   return <ExpandedShoe />
-  // }
-  //can i write a method here that will fire the render of expanded shoe on click
-  
-  
-  render() {
     
+  render() {
     console.log(this.state)
     return (
-      <div>
-      <Router>
       <section>
         <section className="header">
           <h1>Sole Searchin'</h1>
           <p>Find your sole mate</p>
         </section>
         <section className="main-body">
-          <ShoeBox shoes={this.state.shoes}/>
+          <Route exact path="/" render = { () => <ShoeBox shoes={this.state.shoes}/>} />
           <Route 
-            exact path="/shoes/:id" 
-            render={ ( {match} ) => {
-              return <ExpandedShoe />
+            exact path="/shoe/:id" 
+            render={({match}) => {
+              const { id } = match.params;
+              const shoeToRender = this.state.shoes.find(shoe => shoe.id === parseInt(id));
+              return <ExpandedShoe {...shoeToRender}/>
             }}
             />
         </section>
-        {/* <Route exact path="/" render={ <ShoeBox /> }/> */}
       </section>
-      </Router>
-      </div>
     );
   }
 }
 
 export default App;
 
-// component={() => (
-//   <div>
-//     <ExpandedShoe />
-//   </div>
-// )}

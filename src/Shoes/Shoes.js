@@ -9,15 +9,15 @@ const Shoes = ({...props }) => {
             <p>Color: {props.colorway}</p>
             <p>Brand: {props.brand}</p>
             <p>Cost: {props.retail_price}</p>
-                <button type='button'>
             <NavLink to={`/shoe/${props.id}`}>
+                <button type='button'>
                     <img
                         src={props.thumb_url}
                         alt={props.title}
                         className="sneaker-image"
                         />
-            </NavLink>
                 </button>
+            </NavLink>
         </section>
     )
 }
