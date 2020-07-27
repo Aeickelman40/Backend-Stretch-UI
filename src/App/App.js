@@ -23,14 +23,14 @@ class App extends Component {
   }
     
   render() {
-    console.log(this.state)
+    // console.log(this.state)
     return (
       <section>
         <section className="header">
           <h1>Sole Searchin'</h1>
           <p>Find your sole mate</p>
         </section>
-        <section className="main-body">
+        <section className="main-body" data-testid="shoe-area">
           <Route exact path="/" render = { () => <ShoeBox shoes={this.state.shoes}/>} />
           <Route 
             exact path="/shoe/:id" 
