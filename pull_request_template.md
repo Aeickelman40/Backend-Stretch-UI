@@ -9,4 +9,5 @@
 - [ ] App.js/App.css/App.test.js
 - [ ] ShoeBox.js/ShoeBox.css/ShoeBox.test.js
 - [ ] Shoes.js/Shoes.css/Shoes.test.js
+- [ ] ExpandedShoe.js/ExpandedShoe.css/ExpandedShoes.test.js
 - [ ] ApiCalls.js
