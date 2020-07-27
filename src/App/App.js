@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import ShoeBox from '../ShoeBox/ShoeBox'
-import Shoes from '../Shoes/Shoes'
 import {getAllShoes} from '../ApiCalls'
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import ExpandedShoe from "../ExpandedShoe/ExpandedShoe"
 
 class App extends Component {
