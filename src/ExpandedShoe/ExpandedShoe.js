@@ -11,16 +11,6 @@ const ExpandedShoe = ({ ...props }) => {
             <p>Release Date: {props.release_date}</p>
             <p>Demographic: {props.demographic}</p>
             <p>Price: {props.retail_price}</p>
-            {/* <img
-                src={props.image_url}
-                alt={props.title}
-                className="sneaker-image"
-            />
-            <img
-                src={props.thumb_url}
-                alt={props.title}
-                className="sneaker-image"
-            /> */}
             <img
                 src={props.small_image_url}
                 alt={props.title}
