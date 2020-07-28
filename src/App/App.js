@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ShoeBox from '../ShoeBox/ShoeBox'
-import {getAllShoes} from '../ApiCalls'
+import {getAllShoes, postComments} from '../ApiCalls'
 import { Route, NavLink } from 'react-router-dom';
 import ExpandedShoe from "../ExpandedShoe/ExpandedShoe"
 import SubmitShoeForm from "../SubmitShoeForm/SubmitShoeForm"
@@ -11,7 +11,8 @@ class App extends Component {
   constructor () {
     super();
     this.state = {
-      shoes: []
+      shoes: [],
+      comments: [],
     }
   }
 
@@ -24,23 +25,21 @@ class App extends Component {
     }
   }
 
-  // calculate range
-  // at this value on the range
-  // a certain shoe will display
-  // we can have entries
-  // and sort them by price
-  // at index 0 we will have the opportunity to give to the
-  // charity of your choice
-  // however much you choose
-  // 
-  // but once you get past the 0, historical shoes shoes appear
-  // and their prices are evaluated through time
-  // it will represent a kind of encyclopedia
-  // on shoes as we know them.
 
+
+  postNewComment = async (author, main_text, shoeId) => {
+    const response = await postComments(author, main_text, shoeId);
+    console.log('response')
+    return response;
+  }
+
+  addComment = (...newComment) => {
+    this.setState({ ...this.state, comments: newComment })
+  }
   // post new shoe
 
-  // addShoeToDatabase = ()
+
+
     
   render() {
     // console.log(this.state)
@@ -82,7 +81,13 @@ class App extends Component {
             render={({match}) => {
               const { id } = match.params;
               const shoeToRender = this.state.shoes.find(shoe => shoe.id === parseInt(id));
-              return <ExpandedShoe {...shoeToRender}/>
+              return <ExpandedShoe
+                        postNewComment={this.postNewComment}
+                        comments={this.state.comments}
+                        addComment={this.addComment}
+                        shoeId ={id}
+
+               {...shoeToRender}/>
             }}
             />
             <Route 
