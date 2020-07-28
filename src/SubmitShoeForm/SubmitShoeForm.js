@@ -44,12 +44,13 @@ class SubmitShoeForm extends Component {
     render() {
         if (!this.state.submitted) {
         return (
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="defineShoeForm">
             <select 
+                className="brandDropdown"
                 name="brand"
                 value={this.state.brand} 
                 onChange={this.handleChange} required>
-                <option value="">Please Choose A Brand</option>
+                <option value="">BRAND</option>
                 <option value="NIKE">NIKE</option>
                 <option value="Adidas">Adidas</option>
                 <option value="Jordan">Jordan</option>
@@ -59,11 +60,12 @@ class SubmitShoeForm extends Component {
                 <option value="CROCS">CROCS</option>
             </select>
             <input
+                className="colorInput"
                 name="colorway"
                 value={this.state.colorway} 
                 onChange={this.handleChange} 
                 type='text'
-                placeholder='Add your colorway here' required>
+                placeholder='COLOR' required>
             </input>
             <input
                 name="retail_price"
@@ -79,7 +81,7 @@ class SubmitShoeForm extends Component {
                 type='text'
                 placeholder='Model' required>
             </input>
-            <button type="submit" onClick={this.addId}>
+            <button type="submit" onClick={this.addId} className="submitButton" >
                 
             </button>
         </form>

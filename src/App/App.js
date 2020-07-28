@@ -26,6 +26,7 @@ class App extends Component {
   }
 
 
+
   postNewComment = async (author, main_text, shoeId) => {
     const response = await postComments(author, main_text, shoeId);
     console.log('response')
@@ -37,25 +38,30 @@ class App extends Component {
   }
   // post new shoe
 
-  // addShoeToDatabase = ()> {}
+
+
     
   render() {
     // console.log(this.state)
     return (
       <section>
         <section className="header">
-          <h1>Sole Searchin'</h1>
-          <p>Find your sole mate</p>
-          <NavLink to={"/submitShoe"}>
-            <button className="submitButton">
-              Add Shoe
-            </button>
-          </NavLink>
-          <NavLink to={"/"}>
-            <button className="submitButton">
-              Home
-            </button>
-          </NavLink>
+        <section>
+            <h1>SOLE</h1>
+            <h2>SEARCHIN'</h2>
+        </section>
+          <section className="headerButtonsContainer">
+            <NavLink to={"/submitShoe"}>
+              <button className="submitButton">
+                Add Sneaker
+              </button>
+            </NavLink>
+            <NavLink to={"/"}>
+              <button className="submitButton">
+                Home
+              </button>
+            </NavLink>
+          </section>
         </section>
         <section className="main-body" data-testid="shoe-area">
           <Route exact path="/" render = { () => <ShoeBox shoes={this.state.shoes}/>} />
