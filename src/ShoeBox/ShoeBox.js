@@ -1,5 +1,5 @@
-import React from 'react'
-import Shoes from '../Shoes/Shoes'
+import React from 'react';
+import Shoes from '../Shoes/Shoes';
 import './ShoeBox.css';
 import './mediaQuery.css';
 
