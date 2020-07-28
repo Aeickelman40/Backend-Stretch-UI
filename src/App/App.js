@@ -23,6 +23,10 @@ class App extends Component {
       await this.setState({error: error})
     }
   }
+
+  // post new shoe
+
+  addShoeToDatabase = ()
     
   render() {
     // console.log(this.state)
