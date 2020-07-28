@@ -1,10 +1,12 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
+import { render, waitFor, fireEvent } from '@testing-library/react';
 import App from './App';
 import { MemoryRouter } from 'react-router-dom';
 import '../apiCalls'
 import '@testing-library/jest-dom'
 import { getAllShoes } from '../apiCalls';
+import SubmitShoeForm from '../SubmitShoeForm/SubmitShoeForm';
+
 
 jest.mock('../apiCalls')
 
@@ -12,7 +14,7 @@ describe ( 'App', () => {
  
   it('Should render the app component', () => {
     const { getByText, getByTestId } = render(<MemoryRouter><App /></MemoryRouter>)
-    const heading = getByText("Sole Searchin'")
+    const heading = getByText("SOLE")
     const cheesyText = getByText("Find your sole mate")
     const shoeArea = getByTestId("shoe-area")
     expect(heading).toBeInTheDocument();
@@ -46,6 +48,41 @@ describe ( 'App', () => {
 
   it('Should expand a shoes info when its image is clicked', () => {
     
-  })
+  });
 
-}) 
+  it('Should render add shoe form on button click', () => {
+    const { getByText, getByPlaceholderText } = render(<MemoryRouter><App /></MemoryRouter>)
+
+    const addSneakerButton = getByText('Add Sneaker')
+
+    fireEvent.click(addSneakerButton)
+
+    const brandInput = getByPlaceholderText('BRAND');
+    const colorInput = getByPlaceholderText('COLOR');
+    const priceInput = getByPlaceholderText('Price (in dollars)');
+    const modelInput = getByPlaceholderText('MODEL');
+
+    expect(brandInput).toBeInTheDocument();
+    expect(modelInput).toBeInTheDocument();
+    expect(colorInput).toBeInTheDocument();
+    expect(priceInput).toBeInTheDocument();
+  });
+
+  it('Should return home when home from add sneaker form', () => {
+    const { getByText, getByTestId, getByPlaceholderText } = render(<MemoryRouter><App /></MemoryRouter>)
+
+    const addSneakerButton = getByText('Add Sneaker')
+    fireEvent.click(addSneakerButton)
+    const brandInput = getByPlaceholderText('BRAND');
+    expect(brandInput).toBeInTheDocument();
+
+    const goHome = getByText('Home')
+    fireEvent.click(goHome)
+    const shoeArea = getByTestId("shoe-area")
+    expect(shoeArea).toBeInTheDocument();
+  });
+
+  
+
+
+});

@@ -30,7 +30,7 @@ font-family: 'Covered By Your Grace', cursive;
   background-color: #a5a58d;
   height: 22%;
   position: absolute;
-  padding: 1em;
+  padding: 1em 0 1em 3em;
   width: 99vw;
   top: 0;
 }
@@ -42,7 +42,7 @@ font-family: 'Covered By Your Grace', cursive;
   margin: 0;
   line-height: 1em;
   color: rgba(0, 128, 0, 0.555);
-  text-shadow: 7px -7px rgb(43, 6, 6);
+  text-shadow: -6px -7px rgb(43, 6, 6);
 
   font-size: 8.7em;
   line-height: 1em;
@@ -51,21 +51,30 @@ font-family: 'Covered By Your Grace', cursive;
 
 .header h2 {
   font-family: 'Teko', sans-serif;
-
+  color: rgba(25, 182, 25, 0.708);
   font-size: 4em;
   line-height: 1em;
   margin: 0;
-  /* color: rgba(0, 128, 0, 0.555);
-  text-shadow: 7px -7px rgb(43, 6, 6); */
+  text-shadow: -4px -5px rgb(50, 31, 20);
 }
 
 .header p {
-  margin-left: 4%;
+  margin-left: 2%;
+  font-size: 15px;
+  margin-top: 0;
+  width: 9em;
+  font-family: 'Abril Fatface', cursive;
+  color: black;
+  cursor: pointer;
+}
+
+.header a {
+  text-decoration: none;
 }
 
 .headerButtonsContainer {
   top: 0;
-  background-color: #eddcd2;
+  /* background-color: #eddcd2; */
   display: flex;
   align-self: right;
   right: 0;
@@ -75,6 +84,7 @@ font-family: 'Covered By Your Grace', cursive;
   flex-direction: column;
   justify-content: space-around;
   margin-top: -18px;
+  margin-right: 2em;
 }
 
 .main-body {
@@ -125,8 +135,8 @@ font-family: 'Covered By Your Grace', cursive;
 .submitButton {
   background: #5f0101;
   border: none;
-  /* border-radius: 10px; */
-  box-shadow: 4px 7px 13px 0px #000000c2, inset 4px 7px 13px 0px #b7b7a4;
+  border-radius: 5px;
+  box-shadow: 4px 7px 13px 0px #000000c2;
   color: #fdfcfce7;
   cursor: pointer;
   font-size: 24px;
@@ -143,4 +153,5 @@ font-family: 'Covered By Your Grace', cursive;
 
 .headerButtonsContainer button {
   width: 100%;
+  font-family: 'Teko', sans-serif;
 }
