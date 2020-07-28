@@ -50,7 +50,9 @@ class App extends Component {
             <h1>SOLE</h1>
             <h2>SEARCHIN'</h2>
         </section>
-            <p>Find your sole mate</p>
+            <a href="https://www.eharmony.com/cms_lp/lp/psdesign/h_justine/?pscode=04_834_32006_0008_8724_0001_140154c_AF%28EN%290MDM1ITPklGbhZ3ZmU0dC9FR2FUUZl3bD9GeExmazB3VmRlc4QWTvN1aqxWQRFmaq5mN2kUT4YnSUBjStNVd4NTZtlkeUhnVzIVWptGbXNlZEh2RBdXaFJUQSJENfZWb3pWQDt0dqNUPklGbjdmJ4EDMwUjNwEjNzcTPydGZhZSZ9UGc5RHajRXYtZSeu9WbyFGal1DZy92d5V2aID_GV1595963363.25034.d90916bc-d105-11ea-a1a4-00163e05bb22ID&cj=YToyOntzOjI6ImlkIjtzOjM4OiJjamQ5MGMxNDY2LWQxMDUtMTFlYS1hMWE0LTAwMTYzZTA1YmIyMiI7czo2OiJleHBpcmUiO2k6MTY1OTAzNTM2Mzt9">
+              <p>find your sole mate</p>
+            </a>
           <section className="headerButtonsContainer">
             <NavLink to={"/submitShoe"}>
               <button className="submitButton">
