@@ -34,3 +34,6 @@ export const postComments = async (shoeId, author, main_text) => {
   console.log(message)
   return message;
 }
+// export const postShoe = (data) => {
+//   fetch(url)
+// }
