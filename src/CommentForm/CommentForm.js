@@ -9,7 +9,7 @@ class CommentForm extends Component {
     super(props);
     this.state = {
       isLoaded: false,
-      newComment: "",
+      main_text: "",
       author: "",
     }
   };
@@ -34,13 +34,13 @@ class CommentForm extends Component {
     const newComment = {
       shoeId: this.props.id,
       author: this.state.author,
-      comment: this.state.newComment,
+      main_text: this.state.main_text,
       // date: Date.now(),
     }
     this.props.comments.push(newComment)
     console.log(newComment)
 
-    const response = await this.props.postNewComment(newComment.shoeId,newComment.author, newComment.comment)
+    const response = await this.props.postNewComment(newComment.shoeId,newComment.author, newComment.main_text)
     this.props.addComment(...this.props.comments)
   }
   // renderComments = (comments) => {
@@ -59,11 +59,12 @@ class CommentForm extends Component {
 
   render() {
     const comments = this.props.comments.map((comment) => {
+      console.log(comment)
         return (
           <Comment
             author={comment.author}
-            comment={comment.comment}
-            date={comment.date}
+            comment={comment.main_text}
+            date={comment.created_at}
           />
         )
       })
