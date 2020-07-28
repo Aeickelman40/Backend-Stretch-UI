@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ShoeBox from '../ShoeBox/ShoeBox'
-import {getAllShoes} from '../ApiCalls'
+import {getAllShoes, postComments} from '../ApiCalls'
 import { Route } from 'react-router-dom';
 import ExpandedShoe from "../ExpandedShoe/ExpandedShoe"
 
@@ -9,7 +9,8 @@ class App extends Component {
   constructor () {
     super();
     this.state = {
-      shoes: []
+      shoes: [],
+      comments: [],
     }
   }
 
@@ -20,6 +21,17 @@ class App extends Component {
     } catch (error) {
       await this.setState({error: error})
     }
+  }
+
+
+  postNewComment = async (author, main_text, shoeId) => {
+    const response = await postComments(author, main_text, shoeId);
+    console.log('response')
+    return response;
+  }
+
+  addComment = (...newComment) => {
+    this.setState({ ...this.state, comments: newComment })
   }
     
   render() {
@@ -37,7 +49,13 @@ class App extends Component {
             render={({match}) => {
               const { id } = match.params;
               const shoeToRender = this.state.shoes.find(shoe => shoe.id === parseInt(id));
-              return <ExpandedShoe {...shoeToRender}/>
+              return <ExpandedShoe
+                        postNewComment={this.postNewComment}
+                        comments={this.state.comments}
+                        addComment={this.addComment}
+                        shoeId ={id}
+
+               {...shoeToRender}/>
             }}
             />
         </section>
