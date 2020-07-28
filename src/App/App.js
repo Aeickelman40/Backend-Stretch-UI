@@ -46,8 +46,10 @@ class App extends Component {
     return (
       <section>
         <section className="header">
-          <h1>Sole Searchin'</h1>
-          <p>Find your sole mate</p>
+        <section>
+            <h1>SOLE</h1>
+            <h2>SEARCHIN'</h2>
+        </section>
           <section className="headerButtonsContainer">
             <NavLink to={"/submitShoe"}>
               <button className="submitButton">
@@ -57,19 +59,6 @@ class App extends Component {
             <NavLink to={"/"}>
               <button className="submitButton">
                 Home
-              </button>
-            </NavLink>
-            <NavLink to={"theForum"}>
-              <button className="submitButton">
-                The Forum
-              </button>
-            </NavLink><NavLink to={"codeChallenges"}>
-              <button className="submitButton">
-                codeChallenges
-              </button>
-            </NavLink><NavLink to={"/"}>
-              <button className="submitButton">
-                Networking
               </button>
             </NavLink>
           </section>

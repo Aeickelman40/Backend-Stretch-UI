@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
 /*
 #cb997e
 #eddcd2
@@ -16,7 +16,7 @@
   height: 100vh;
 }
 
-font-family: 'Abril Fatface', cursive;
+/* font-family: 'Abril Fatface', cursive; */
 
  * {
 background-color: #a5a58d;
@@ -24,10 +24,11 @@ font-family: 'Covered By Your Grace', cursive;
 }
 
 .header {
-  font-family: 'Abril Fatface', cursive;
+  /* font-family: 'Abril Fatface', cursive; */
+  font-family: 'Teko', sans-serif;
   display: flex;
   background-color: #a5a58d;
-  height: 36%;
+  height: 22%;
   position: absolute;
   padding: 1em;
   width: 99vw;
@@ -35,12 +36,27 @@ font-family: 'Covered By Your Grace', cursive;
 }
 
 .header h1 {
+  font-family: 'Teko', sans-serif;
+
   width: 15%;
-  font-size: 8.8em;
   margin: 0;
   line-height: 1em;
   color: rgba(0, 128, 0, 0.555);
   text-shadow: 7px -7px rgb(43, 6, 6);
+
+  font-size: 8.7em;
+  line-height: 1em;
+  margin-bottom: -.2em;
+}
+
+.header h2 {
+  font-family: 'Teko', sans-serif;
+
+  font-size: 4em;
+  line-height: 1em;
+  margin: 0;
+  /* color: rgba(0, 128, 0, 0.555);
+  text-shadow: 7px -7px rgb(43, 6, 6); */
 }
 
 .header p {
@@ -64,7 +80,7 @@ font-family: 'Covered By Your Grace', cursive;
 .main-body {
   font-family: 'Covered By Your Grace', cursive;
   background-color: white;
-  height: 63%;
+  height: 75%;
   position: absolute;
   width: 99vw;
   bottom: 0;
@@ -73,6 +89,7 @@ font-family: 'Covered By Your Grace', cursive;
 .shoes{
   display: flex;
   flex-wrap: wrap;
+  background-color: white;
   border-right: 1px solid lightgray;
     /* border-top: lightgrey; */
     border-top: 1px solid lightgray;
