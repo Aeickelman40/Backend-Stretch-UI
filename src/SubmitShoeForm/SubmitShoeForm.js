@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
+// import '../apiCalls'
+import { postShoe } from '../ApiCalls';
 
 class SubmitShoeForm extends Component {
     constructor() {
         super();
         this.state = {
             id: 0,
-            // brand: '',
+            brand: '',
             model: '',
             colorway: '',
             retail_price: 0,
@@ -13,7 +15,17 @@ class SubmitShoeForm extends Component {
         }
     }
 
-    addAnotherShoe = () => {
+    postNewShoe = (event) => {
+        event.preventDefault();
+        const brand = this.state.brand;
+        const model = this.state.model;
+        const colorway = this.state.colorway;
+        const price = this.state.retail_price;
+        postShoe(brand, model, colorway, price);
+        this.setState({ submitted: true })
+    }
+
+    clearInputs = () => {
         this.setState({ 
             id: 0,
             brand: '',
@@ -27,9 +39,6 @@ class SubmitShoeForm extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.setState({ submitted: true })
-        console.log(this.state)
-        // indicator that says submission is pending...
-        // shoe submitted 
     }
 
     handleChange = (event) => {
@@ -37,9 +46,9 @@ class SubmitShoeForm extends Component {
         this.setState({ [event.target.name]: event.target.value })
     }
 
-    addId = () => {
-        this.setState({ id: Date.now()})
-    }
+    // addId = () => {
+    //     this.setState({ id: Date.now()})
+    // }
 
     render() {
         if (!this.state.submitted) {
@@ -82,7 +91,7 @@ class SubmitShoeForm extends Component {
                 type='text'
                 placeholder='MODEL' required>
             </input>
-            <button type="submit" onClick={this.addId} className="submitButton" >
+            <button type="submit" onClick={this.postNewShoe} className="submitButton" >
                 Submit Sneaker
             </button>
         </form>
@@ -91,7 +100,7 @@ class SubmitShoeForm extends Component {
             return (
                 <section>
                     <h2>Submission has been added</h2>
-                    <button onClick={this.addAnotherShoe}>Submit another shoe</button> 
+                    <button onClick={this.clearInputs}>Submit another shoe</button> 
                     
                 </section>
             )

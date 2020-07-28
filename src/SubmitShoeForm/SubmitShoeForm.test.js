@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import '../apiCalls'
+import '../ApiCalls'
 import '@testing-library/jest-dom'
-import { getAllShoes } from '../apiCalls';
+import { getAllShoes } from '../ApiCalls';
 import SubmitShoeForm from './SubmitShoeForm';
 
 jest.mock('../apiCalls')

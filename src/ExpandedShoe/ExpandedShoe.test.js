@@ -1,13 +1,13 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import '../apiCalls'
+import '../ApiCalls'
 import '@testing-library/jest-dom'
-import { getAllShoes } from '../apiCalls';
+import { getAllShoes } from '../ApiCalls';
 import ExpandedShoe from './ExpandedShoe';
 // import App from '../App/App'
 
-jest.mock('../apiCalls')
+jest.mock('../ApiCalls')
 
 describe( 'ExpandedShoe', () => {
 
