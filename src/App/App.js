@@ -36,6 +36,11 @@ class App extends Component {
               Add Shoe
             </button>
           </NavLink>
+          <NavLink to={"/"}>
+            <button className="submitButton">
+              Home
+            </button>
+          </NavLink>
         </section>
         <section className="main-body" data-testid="shoe-area">
           <Route exact path="/" render = { () => <ShoeBox shoes={this.state.shoes}/>} />

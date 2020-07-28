@@ -89,6 +89,7 @@ class SubmitShoeForm extends Component {
                 <section>
                     <h2>Submission has been added</h2>
                     <button onClick={this.addAnotherShoe}>Submit another shoe</button> 
+                    
                 </section>
             )
         }
