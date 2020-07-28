@@ -37,7 +37,7 @@ class App extends Component {
   }
   // post new shoe
 
-  addShoeToDatabase = ()
+  // addShoeToDatabase = ()> {}
     
   render() {
     // console.log(this.state)
