@@ -1,4 +1,6 @@
 import React from "react"
+import CommentForm from '../CommentForm/CommentForm'
+import Comment from '../CommentForm/Comment'
 
 
 const ExpandedShoe = ({ ...props }) => {
@@ -16,6 +18,9 @@ const ExpandedShoe = ({ ...props }) => {
                 alt={props.title}
                 className="sneaker-image"
             />
+            <section>
+                <CommentForm {...props}/>
+            </section>
         </section>
     )
 }
