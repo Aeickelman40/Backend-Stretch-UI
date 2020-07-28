@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 /*
 #cb997e
@@ -15,14 +16,18 @@
   height: 100vh;
 }
 
-/* * {
+font-family: 'Abril Fatface', cursive;
+
+ * {
 background-color: #a5a58d;
-} */
+font-family: 'Covered By Your Grace', cursive;
+}
+
 .header {
-  font-family: 'Covered By Your Grace', cursive;
+  font-family: 'Abril Fatface', cursive;
   display: flex;
   background-color: #a5a58d;
-  height: 18%;
+  height: 36%;
   position: absolute;
   padding: 1em;
   width: 99vw;
@@ -31,14 +36,35 @@ background-color: #a5a58d;
 
 .header h1 {
   width: 15%;
-  font-size: 3em;
+  font-size: 8.8em;
   margin: 0;
+  line-height: 1em;
+  color: rgba(0, 128, 0, 0.555);
+  text-shadow: 7px -7px rgb(43, 6, 6);
+}
+
+.header p {
+  margin-left: 4%;
+}
+
+.headerButtonsContainer {
+  top: 0;
+  background-color: #eddcd2;
+  display: flex;
+  align-self: right;
+  right: 0;
+  position: absolute;
+  width: 180px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: -18px;
 }
 
 .main-body {
   font-family: 'Covered By Your Grace', cursive;
-  background-color: #f0efeb;
-  height: 82%;
+  background-color: white;
+  height: 63%;
   position: absolute;
   width: 99vw;
   bottom: 0;
@@ -47,23 +73,57 @@ background-color: #a5a58d;
 .shoes{
   display: flex;
   flex-wrap: wrap;
+  border-right: 1px solid lightgray;
+    /* border-top: lightgrey; */
+    border-top: 1px solid lightgray;
+}
+
+.defineShoeForm {
+  top: 0;
+  display: flex;
+  align-self: right;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  width: 180px;
+  height: 90%;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 22px;
+  
+}
+
+.brandDropdown {
+  font-size: 51px;
+  width: 4em;
+  /* height: 51px; */
+}
+
+.colorInput {
+  font-size: 51px;
+  width: 3.9em;
+  /* height: 51px; */
 }
 
 .submitButton {
-  background: #ddbea9;
+  background: #5f0101;
   border: none;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   box-shadow: 4px 7px 13px 0px #000000c2, inset 4px 7px 13px 0px #b7b7a4;
-  color: #000000c2;
+  color: #fdfcfce7;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 24px;
   height: 40px;
   width: 20em;
   margin-top: 4%;
   outline: none;
-  max-width: 25%;
+  /* max-width: 25%; */
 }
 
 .submitButton:hover {
   box-shadow: inset 4px 7px 13px 0px #000000c2;
+}
+
+.headerButtonsContainer button {
+  width: 100%;
 }
