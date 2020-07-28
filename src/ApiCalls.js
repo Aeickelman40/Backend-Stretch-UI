@@ -6,3 +6,7 @@ export const getAllShoes = async () => {
   const shoes = await response.json();
   return shoes;
 }
+
+export const postShoe = (data) => {
+  fetch(url)
+}

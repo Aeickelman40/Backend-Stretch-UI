@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import ShoeBox from '../ShoeBox/ShoeBox'
 import {getAllShoes} from '../ApiCalls'
-import { Route } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 import ExpandedShoe from "../ExpandedShoe/ExpandedShoe"
+import SubmitShoeForm from "../SubmitShoeForm/SubmitShoeForm"
+
 
 class App extends Component {
   constructor () {
@@ -21,6 +23,10 @@ class App extends Component {
       await this.setState({error: error})
     }
   }
+
+  // post new shoe
+
+  addShoeToDatabase = ()
     
   render() {
     // console.log(this.state)
@@ -29,6 +35,16 @@ class App extends Component {
         <section className="header">
           <h1>Sole Searchin'</h1>
           <p>Find your sole mate</p>
+          <NavLink to={"/submitShoe"}>
+            <button className="submitButton">
+              Add Shoe
+            </button>
+          </NavLink>
+          <NavLink to={"/"}>
+            <button className="submitButton">
+              Home
+            </button>
+          </NavLink>
         </section>
         <section className="main-body" data-testid="shoe-area">
           <Route exact path="/" render = { () => <ShoeBox shoes={this.state.shoes}/>} />
@@ -40,8 +56,13 @@ class App extends Component {
               return <ExpandedShoe {...shoeToRender}/>
             }}
             />
+            <Route 
+              exact path="/submitShoe" 
+              render={() => <SubmitShoeForm />}
+            />
         </section>
       </section>
+      
     );
   }
 }

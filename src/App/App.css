@@ -49,3 +49,21 @@ background-color: #a5a58d;
   flex-wrap: wrap;
 }
 
+.submitButton {
+  background: #ddbea9;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 4px 7px 13px 0px #000000c2, inset 4px 7px 13px 0px #b7b7a4;
+  color: #000000c2;
+  cursor: pointer;
+  font-size: 18px;
+  height: 40px;
+  width: 20em;
+  margin-top: 4%;
+  outline: none;
+  max-width: 25%;
+}
+
+.submitButton:hover {
+  box-shadow: inset 4px 7px 13px 0px #000000c2;
+}
