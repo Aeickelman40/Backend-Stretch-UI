@@ -51,12 +51,11 @@ font-family: 'Covered By Your Grace', cursive;
 
 .header h2 {
   font-family: 'Teko', sans-serif;
-
+  color: rgba(25, 182, 25, 0.708);
   font-size: 4em;
   line-height: 1em;
   margin: 0;
-  /* color: rgba(0, 128, 0, 0.555);
-  text-shadow: 7px -7px rgb(43, 6, 6); */
+  text-shadow: -4px -5px rgb(50, 31, 20);
 }
 
 .header p {
@@ -65,7 +64,7 @@ font-family: 'Covered By Your Grace', cursive;
 
 .headerButtonsContainer {
   top: 0;
-  background-color: #eddcd2;
+  /* background-color: #eddcd2; */
   display: flex;
   align-self: right;
   right: 0;

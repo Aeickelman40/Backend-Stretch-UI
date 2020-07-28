@@ -50,6 +50,7 @@ class App extends Component {
             <h1>SOLE</h1>
             <h2>SEARCHIN'</h2>
         </section>
+            <p>Find your sole mate</p>
           <section className="headerButtonsContainer">
             <NavLink to={"/submitShoe"}>
               <button className="submitButton">

@@ -48,6 +48,7 @@ class SubmitShoeForm extends Component {
             <select 
                 className="brandDropdown"
                 name="brand"
+                placeholder="BRAND"
                 value={this.state.brand} 
                 onChange={this.handleChange} required>
                 <option value="">BRAND</option>
@@ -79,10 +80,10 @@ class SubmitShoeForm extends Component {
                 value={this.state.model} 
                 onChange={this.handleChange} 
                 type='text'
-                placeholder='Model' required>
+                placeholder='MODEL' required>
             </input>
             <button type="submit" onClick={this.addId} className="submitButton" >
-                
+                Submit Sneaker
             </button>
         </form>
         )
