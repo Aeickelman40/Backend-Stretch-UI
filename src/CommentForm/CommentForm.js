@@ -61,7 +61,7 @@ class CommentForm extends Component {
             ></input>
             <input
             className="comment-input input"
-              name="newComment"
+              name="main_text"
               placeholder="Comment"
               type="text"
               value={this.state.newComment}
