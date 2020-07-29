@@ -9,7 +9,7 @@ We chose to learn a few backend technologies and principals. SOLE SEARCHIN' is a
 
 ## Installation:
 
-`It may be helpful to create an empty directory on your local machine, to hold a backend and frontend directories`
+`It may be helpful to create an empty directory on your local machine, to hold backend and frontend directories`
 
   ### Backend:
   
