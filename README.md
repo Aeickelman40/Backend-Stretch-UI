@@ -1,68 +1,67 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SOLE SEARCHIN'
+### Stretch Project
 
-## Available Scripts
+## Abstract:
+SOLE SEARCHIN' is a Mod 3 group (three persons) frontend project at Turing School of Software Design. While this project offers us the opportunity to further our understanding of React, components, state, props and fundamental JavaScript principals. It also presented us with the challenge of expanding our understanding of software development. We were allowed to choose a `stretch technology` (a technology outside of our current curriculum), to study, and build a web application around.
 
-In the project directory, you can run:
+We chose to learn a few backend technologies and principals. SOLE SEARCHIN' is an application for "Sneaker Heads" that allows them to be a part of the world's first evolving sneaker encyclopedia. Their knowledge can be added via comments or a sneaker creator form. 
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+`It may be helpful to create an empty directory on your local machine, to hold a backend and frontend directories`
 
-### `npm test`
+  ### Backend:
+  
+   1. Clone [this](https://github.com/jdvolk/sole-searchin-backend) repository into a directory.
+   
+     a. in your termianl run `npm install`
+     b. in your termianl run `nodemon server.js`    
+      • if your terminal logs `App running on port...`, your install was successful
+      • if your terminal logs anything else, attempt step one again.
+      
+      
+ `It may be helpful to have several tabs open in your terminal.`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  ### Frontend: 
+  
+   1. Clone [this](https://github.com/Aeickelman40/Sole-Searchin-Stretch-UI) repository into a directory.
+   
+     a. in your termianl run `npm install` 
+     b. in your termianl run `npm run start`
+     c. go to http://localhost:3000 in your browser
+     
 
-### `npm run build`
+## Contributors:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Alex Eickelman](https://github.com/Aeickelman40)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+[Justin Volk](https://github.com/jdvolk)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Jeremiah Black](https://github.com/jeremiahblackol)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Technologies Used:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+React Router
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+React Testing Library & Jest
 
-## Learn More
+Express
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Knex
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+HerokuApp
 
-### Code Splitting
+Postgres
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Postico
 
-### Analyzing the Bundle Size
+Git and GitHub
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Fetch API
 
-### Making a Progressive Web App
+This project was bootstrapped with Create React App.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
