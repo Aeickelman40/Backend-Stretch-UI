@@ -3,8 +3,6 @@ import Comment from './Comment';
 import { getComments } from '../ApiCalls'
 import './CommentForm.css'
 
-
-
 class CommentForm extends Component {
   constructor (props) {
     super(props);
