@@ -1,10 +1,7 @@
 import React from "react"
 import CommentForm from '../CommentForm/CommentForm'
-import Comment from '../CommentForm/Comment'
-
 
 const ExpandedShoe = ({ ...props }) => {
-    console.log(props)
     return (
         <section>
             <h1>Model: {props.model}</h1>
