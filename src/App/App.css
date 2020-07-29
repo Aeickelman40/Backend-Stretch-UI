@@ -113,7 +113,8 @@ font-family: 'Covered By Your Grace', cursive;
   flex-direction: column;
   justify-content: space-between;
   margin-top: 22px;
-  
+  margin-left: 1em;
+  background-color: white;
 }
 
 .brandDropdown {
