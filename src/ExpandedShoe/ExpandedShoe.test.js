@@ -8,7 +8,12 @@ import ExpandedShoe from './ExpandedShoe';
 // import App from '../App/App'
 
 jest.mock('../ApiCalls')
+describe('test', () => {
+    it("should be true", () => {
 
+        expect(true).toBe(true)
+    })
+})
 describe( 'ExpandedShoe', () => {
 
     it('Should render the ExpandedShoe component', () => {

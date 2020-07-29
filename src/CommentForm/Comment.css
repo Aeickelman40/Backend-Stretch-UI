@@ -1,0 +1,10 @@
+.Comment {
+  min-width: 10%;
+  padding: 5px;
+  margin: 5px;
+  box-shadow: inset 1px 1px 9px black;
+  border-radius: 15px;
+}
+p {
+  margin: 10px;
+}

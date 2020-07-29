@@ -5,10 +5,16 @@
   max-height: 10%;
   margin: 1%;
   padding: 25px;
-  border: 
+  /* border:  */
 }
+
 .sneaker-image {
   box-shadow: -1px 0px 13px 0px black;
   border-radius: 10px;
+  cursor: pointer;
 }
+.sneaker-image:hover {
+  filter: drop-shadow(1px 1px 3px black);
+}
+
 
