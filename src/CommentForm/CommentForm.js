@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Comment from './Comment';
 import { getComments } from '../ApiCalls'
+import './CommentForm.css'
 
 
 
@@ -71,8 +72,7 @@ class CommentForm extends Component {
 
     return (
       <section className="comment-section">
-        <h1>Comments</h1>
-        <section className="comments-display">{comments}</section>
+       
        {
           // display comments for this shoe
           // create comment component with author, date, comment
@@ -94,19 +94,22 @@ class CommentForm extends Component {
             <input
             className="comment-input input"
               name="newComment"
+              placeholder="Comment"
               type="text"
               value={this.state.newComment}
               onChange={this.handleChange}
             ></input>
             <button
-              className="submit-button"
+              className="submitButton commentButton"
               type="submit"
               onClick={ this.handleSubmit }
-            ></button>
+            >Submit Comment</button>
 
           </form>
           {// submit form posts comment to api
           }
+          <h1>Comments</h1>
+        <section className="comments-display">{comments}</section>
       </section>
         
     )
