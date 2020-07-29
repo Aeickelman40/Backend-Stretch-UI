@@ -31,6 +31,10 @@ We chose to learn a few backend technologies and principals. SOLE SEARCHIN' is a
      b. in your termianl run `npm run start`
      c. go to http://localhost:3000 in your browser
      
+## GIFs:
+
+
+     
 
 ## Contributors:
 
