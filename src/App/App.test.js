@@ -5,8 +5,6 @@ import { MemoryRouter } from 'react-router-dom';
 import '../ApiCalls'
 import '@testing-library/jest-dom'
 import { getAllShoes, getComments } from '../ApiCalls';
-import SubmitShoeForm from '../SubmitShoeForm/SubmitShoeForm';
-
 
 jest.mock('../ApiCalls')
 
@@ -46,8 +44,6 @@ describe ( 'App', () => {
   })
   
   it('Should render the app component', () => {
-    // getAllShoes.mockResolvedValue(mockGetAllShoes);
-    // getComments.mockResolvedValue(mockGetComments);
     const { getByText, getByTestId } = render(<MemoryRouter><App /></MemoryRouter>)
     const heading = getByText("SOLE")
     const cheesyText = getByText("find your sole mate")
@@ -56,6 +52,7 @@ describe ( 'App', () => {
     expect(cheesyText).toBeInTheDocument();
     expect(shoeArea).toBeInTheDocument();
   })
+
   it('Should be able to view all shoes on load', async () => {
     getAllShoes.mockResolvedValue(mockGetAllShoes);
     getComments.mockResolvedValue(mockGetComments);
@@ -89,9 +86,6 @@ describe ( 'App', () => {
     expect(model).toBeInTheDocument();
     expect(nameInput).toBeInTheDocument();
     expect(commentSection).toBeInTheDocument();
-
-
-
   });
 
   it('Should render add shoe form on button click', () => {
@@ -125,11 +119,12 @@ describe ( 'App', () => {
     const shoeArea = getByTestId("shoe-area")
     expect(shoeArea).toBeInTheDocument();
   });
+
   it("should render comment section when expanded shoe is clicked", async () => {
     getAllShoes.mockResolvedValue(mockGetAllShoes);
     getComments.mockResolvedValue(mockGetComments);
 
-    const { getByText, getByRole, getByAltText, getAllByRole, getByPlaceholderText } = render(<MemoryRouter><App /></MemoryRouter>)
+    const { getByAltText, getByPlaceholderText } = render(<MemoryRouter><App /></MemoryRouter>)
     await waitFor(() => {
       const shoeImage = getByAltText("Jordan 13 Retro White Lucky Green")
       fireEvent.click(shoeImage);
@@ -139,16 +134,16 @@ describe ( 'App', () => {
     const commentInput = getByPlaceholderText("Comment", {exact: false});
     expect(nameInput).toBeInTheDocument();
     expect(commentInput).toBeInTheDocument();
-  })
+  });
+
   it("should change values of comment inputs", async () => {
     getAllShoes.mockResolvedValue(mockGetAllShoes);
     getComments.mockResolvedValue(mockGetComments);
 
-    const { getByText, getByRole, getByAltText, getAllByRole, getByPlaceholderText } = render(<MemoryRouter><App /></MemoryRouter>)
+    const { getByAltText, getByPlaceholderText } = render(<MemoryRouter><App /></MemoryRouter>)
     await waitFor(() => {
       const shoeImage = getByAltText("Jordan 13 Retro White Lucky Green")
       fireEvent.click(shoeImage);
-      // console.log(shoeImage)
     })
     const nameInput = getByPlaceholderText("Name", {exact: false});
     const commentInput = getByPlaceholderText("Comment", {exact: false});
@@ -157,7 +152,6 @@ describe ( 'App', () => {
     fireEvent.change(commentInput, {target: {value: "Test Comment"}})
 
     expect(nameInput.value).toBe("Test Name")
-    expect(commentInput.value).toBe("Test Comment")
-    
+    expect(commentInput.value).toBe("Test Comment")   
   })
 });
