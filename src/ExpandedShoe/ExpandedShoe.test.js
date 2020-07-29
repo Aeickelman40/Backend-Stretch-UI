@@ -1,36 +1,31 @@
-import React from 'react';
-import { render, waitFor } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import '../ApiCalls'
-import '@testing-library/jest-dom'
-import { getAllShoes } from '../ApiCalls';
-import ExpandedShoe from './ExpandedShoe';
-// import App from '../App/App'
+// import React from 'react';
+// import { render, waitFor } from '@testing-library/react';
+// import { MemoryRouter } from 'react-router-dom';
+// import '../ApiCalls'
+// import '@testing-library/jest-dom'
+// import { getAllShoes } from '../ApiCalls';
+// import ExpandedShoe from './ExpandedShoe';
+// // import App from '../App/App'
 
-jest.mock('../ApiCalls')
-describe('test', () => {
-    it("should be true", () => {
+// jest.mock('../ApiCalls');
 
-        expect(true).toBe(true)
-    })
-})
-describe( 'ExpandedShoe', () => {
+// describe( 'ExpandedShoe', () => {
 
-    it('Should render the ExpandedShoe component', () => {
-        const { getByText } = render(<MemoryRouter><ExpandedShoe /></MemoryRouter>)
-        const model = getByText('Model:');
-        const brand = getByText('Brand:');
-        const color = getByText('Color:');
-        const releaseDate = getByText('Release Date:');
-        const demographic = getByText('Demographic:');
-        const price = getByText('Price:');
-        expect(brand).toBeInTheDocument();
-        expect(model).toBeInTheDocument();
-        expect(color).toBeInTheDocument();
-        expect(releaseDate).toBeInTheDocument();
-        expect(demographic).toBeInTheDocument();
-        expect(price).toBeInTheDocument();
-    })
+//     it('Should render the ExpandedShoe component', () => {
+//         const { getByText } = render(<MemoryRouter><ExpandedShoe /></MemoryRouter>)
+//         const model = getByText('Model:');
+//         const brand = getByText('Brand:');
+//         const color = getByText('Color:');
+//         const releaseDate = getByText('Release Date:');
+//         const demographic = getByText('Demographic:');
+//         const price = getByText('Price:');
+//         expect(brand).toBeInTheDocument();
+//         expect(model).toBeInTheDocument();
+//         expect(color).toBeInTheDocument();
+//         expect(releaseDate).toBeInTheDocument();
+//         expect(demographic).toBeInTheDocument();
+//         expect(price).toBeInTheDocument();
+//     })
 
     // it('Should pull unique data based on what shoe was selected', async () => {
     //     getAllShoes.mockResolvedValue({
@@ -56,4 +51,4 @@ describe( 'ExpandedShoe', () => {
     //   expect(brand).toBeInTheDocument();
     // })
 
-})
+// })

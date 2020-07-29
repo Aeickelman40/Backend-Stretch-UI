@@ -46,10 +46,6 @@ class SubmitShoeForm extends Component {
         this.setState({ [event.target.name]: event.target.value })
     }
 
-    // addId = () => {
-    //     this.setState({ id: Date.now()})
-    // }
-
     render() {
         if (!this.state.submitted) {
         return (
@@ -78,6 +74,7 @@ class SubmitShoeForm extends Component {
                 placeholder='COLOR' required>
             </input>
             <input
+                className="price"
                 name="retail_price"
                 value={this.state.retail_price} 
                 onChange={this.handleChange} 
@@ -85,6 +82,7 @@ class SubmitShoeForm extends Component {
                 placeholder='Price (in dollars)' required>
             </input>
             <input
+                className="model"
                 name="model"
                 value={this.state.model} 
                 onChange={this.handleChange} 

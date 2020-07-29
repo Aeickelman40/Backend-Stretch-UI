@@ -3,7 +3,6 @@ import { render, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import '../ApiCalls'
 import '@testing-library/jest-dom'
-import { getAllShoes } from '../ApiCalls';
 import SubmitShoeForm from './SubmitShoeForm';
 
 jest.mock('../apiCalls')
@@ -56,10 +55,4 @@ describe( 'SubmitShoeForm', () => {
         expect(submitAnotherShoe).toBeInTheDocument();
 
     });
-
-    it('Should give an error message if form is filled out incorrectly', () => {
-
-    })
-
-
 });

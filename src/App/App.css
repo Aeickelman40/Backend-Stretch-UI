@@ -16,7 +16,6 @@
   height: 100vh;
 }
 
-/* font-family: 'Abril Fatface', cursive; */
 
  * {
 background-color: #a5a58d;
@@ -24,7 +23,6 @@ font-family: 'Covered By Your Grace', cursive;
 }
 
 .header {
-  /* font-family: 'Abril Fatface', cursive; */
   font-family: 'Teko', sans-serif;
   display: flex;
   background-color: #a5a58d;
@@ -74,7 +72,6 @@ font-family: 'Covered By Your Grace', cursive;
 
 .headerButtonsContainer {
   top: 0;
-  /* background-color: #eddcd2; */
   display: flex;
   align-self: right;
   right: 0;
@@ -101,8 +98,7 @@ font-family: 'Covered By Your Grace', cursive;
   flex-wrap: wrap;
   background-color: white;
   border-right: 1px solid lightgray;
-    /* border-top: lightgrey; */
-    border-top: 1px solid lightgray;
+  border-top: 1px solid lightgray;
 }
 
 .defineShoeForm {
@@ -117,19 +113,18 @@ font-family: 'Covered By Your Grace', cursive;
   flex-direction: column;
   justify-content: space-between;
   margin-top: 22px;
-  
+  margin-left: 1em;
+  background-color: white;
 }
 
 .brandDropdown {
   font-size: 51px;
   width: 4em;
-  /* height: 51px; */
 }
 
 .colorInput {
   font-size: 51px;
   width: 3.9em;
-  /* height: 51px; */
 }
 
 .submitButton {
@@ -144,7 +139,6 @@ font-family: 'Covered By Your Grace', cursive;
   width: 20em;
   margin-top: 4%;
   outline: none;
-  /* max-width: 25%; */
 }
 
 .submitButton:hover {
@@ -157,4 +151,18 @@ font-family: 'Covered By Your Grace', cursive;
 }
 .expand-button {
   border: none;
+}
+
+.price {
+  font-size: 51px;
+  width: 3.9em;
+}
+
+.model {
+  font-size: 51px;
+  width: 3.9em;
+}
+
+.defineShoeForm button {
+  width: 8.7em;
 }

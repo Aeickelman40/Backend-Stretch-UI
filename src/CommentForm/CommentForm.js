@@ -3,8 +3,6 @@ import Comment from './Comment';
 import { getComments } from '../ApiCalls'
 import './CommentForm.css'
 
-
-
 class CommentForm extends Component {
   constructor (props) {
     super(props);
@@ -16,14 +14,11 @@ class CommentForm extends Component {
   };
 
   componentDidMount = async () => {
-    console.log(this.props);
     // fetch Comments
     // write api to only get comments for 1 specific shoe
     const response = await getComments(this.props.shoeId)
     this.props.addComment(...response)
     return response;
-
-   // this.setState(this.state, {newComment: 'what upppppp'})
   }
 
   handleChange = (event) => {
@@ -36,31 +31,15 @@ class CommentForm extends Component {
       shoeId: this.props.id,
       author: this.state.author,
       main_text: this.state.main_text,
-      // date: Date.now(),
     }
     this.props.comments.push(newComment)
-    console.log(newComment)
 
     const response = await this.props.postNewComment(newComment.shoeId,newComment.author, newComment.main_text)
     this.props.addComment(...this.props.comments)
   }
-  // renderComments = (comments) => {
-  //   comments = this.props.comments.map((comment) => {
-  //     return (
-  //       <Comment
-  //         author={comment.author}
-  //         comment={comment.comment}
-  //         date={comment.date}
-  //       />
-  //     )
-  //   })
-  // }
-
-  
 
   render() {
     const comments = this.props.comments.map((comment) => {
-      console.log(comment)
         return (
           <Comment
             author={comment.author}
@@ -72,17 +51,6 @@ class CommentForm extends Component {
 
     return (
       <section className="comment-section">
-       
-       {
-          // display comments for this shoe
-          // create comment component with author, date, comment
-          // map through array of comment objs, render them to page
-          // what to do if no comments
-
-
-        // display form to add new comments
-       }
-
           <form className="comment-form">
             <input
                 className="name-input input"
@@ -93,7 +61,7 @@ class CommentForm extends Component {
             ></input>
             <input
             className="comment-input input"
-              name="newComment"
+              name="main_text"
               placeholder="Comment"
               type="text"
               value={this.state.newComment}
@@ -106,15 +74,11 @@ class CommentForm extends Component {
             >Submit Comment</button>
 
           </form>
-          {// submit form posts comment to api
-          }
           <h1>Comments</h1>
         <section className="comments-display">{comments}</section>
       </section>
         
     )
   }
-
-
 }
 export default CommentForm;
