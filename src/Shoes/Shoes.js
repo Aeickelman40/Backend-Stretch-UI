@@ -6,7 +6,7 @@ const Shoes = ({...props }) => {
         <section> 
             <p>Cost: {props.retail_price}</p>
             <NavLink to={`/shoe/${props.id}`}>
-                <button type='button'>
+                <button type='button' className="expand-button">
                     <img
                         src={props.thumb_url}
                         alt={props.title}

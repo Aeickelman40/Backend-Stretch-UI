@@ -1,0 +1,31 @@
+.input {
+  display: flex;
+  width: 50%;
+  height: 10%;
+  border-radius: 20px;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  border-bottom: 1px solid black;
+  box-shadow: inset 1px 1px 5px black;
+}
+.commentForm {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-width: 50%;
+}
+.commentButton {
+  margin: 0;
+  margin-left: 12px;
+  width: 50%;
+}
+.comments-display {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+form {
+  margin-top: 5%;
+  margin-left: 30%;
+}
